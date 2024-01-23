@@ -2,6 +2,7 @@ import express from 'express'
 import {db} from './db.js'
 
 const app = express()
+app.use(express.json())
 
 app.get("/books", (req, res) => {
     const q = 'select * from books'
