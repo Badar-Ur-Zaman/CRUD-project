@@ -11,7 +11,7 @@ app.get("/books", (req, res) => {
     });
 });
 
-app.post("/books", (err, data) => {
+app.post("/books", (req, res) => {
     const q = 'Insert into books (title, description, cover) Values(?)'
     const values = [
         req.body.title,
